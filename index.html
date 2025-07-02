@@ -1,92 +1,177 @@
-<link rel="stylesheet" href="style.css">
-<header>
-  <div class="logo-nav">
-    <img src="H. FULL COLOR" alt="Cáritas Carabayllo" class="logo">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#eventos">Eventos</a></li>
-        <li><a href="#transparencia">Transparencia</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cáritas Carabayllo</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos personalizados */
+    body {
+      padding-top: 70px;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .hero-text {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-caritas.png" alt="Logo">
+        Cáritas Carabayllo
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transparencia">Transparencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero/Slider -->
+  <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/slider1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block hero-text">
+          <h1>Bienvenidos a Cáritas Carabayllo</h1>
+          <p>Comprometidos con el desarrollo humano integral</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slider2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+  <!-- Galería -->
+  <section id="galeria" class="container py-5">
+    <h2 class="text-center mb-4">Galería</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3"><img src="images/gal1.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4 mb-3"><img src="images/gal2.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4 mb-3"><img src="images/gal3.jpg" class="img-fluid rounded"></div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section id="equipo" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestro Equipo</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="images/equipo1.jpg" class="rounded-circle mb-2" width="120">
+          <h5>Juan Pérez</h5>
+          <p>Director General</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/equipo2.jpg" class="rounded-circle mb-2" width="120">
+          <h5>María López</h5>
+          <p>Coordinadora de Proyectos</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/equipo3.jpg" class="rounded-circle mb-2" width="120">
+          <h5>Carlos Ramón</h5>
+          <p>Encargado de Logística</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos -->
+  <section id="eventos" class="container py-5">
+    <h2 class="text-center mb-4">Eventos</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/evento1.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Campaña de Donación</h5>
+            <p class="card-text">15 Julio 2025 - Apoya con ropa y alimentos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/evento2.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Voluntariado Juvenil</h5>
+            <p class="card-text">10 Agosto 2025 - Jornada de acción social.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparencia -->
+  <section id="transparencia" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Transparencia</h2>
+      <ul class="list-group mb-3">
+        <li class="list-group-item"><a href="#">Informe Anual 2024</a></li>
+        <li class="list-group-item"><a href="#">Estados Financieros</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-<section id="inicio" class="hero">
-  <div class="hero-text">
-    <h1>Cáritas Carabayllo</h1>
-    <p>Comprometidos con el desarrollo humano y social</p>
-  </div>
-</section>
-
-<section id="galeria" class="seccion">
-  <h2>Galería de Fotos</h2>
-  <div class="galeria">
-    <img src="https://via.placeholder.com/400x250" alt="">
-    <img src="https://via.placeholder.com/400x250" alt="">
-    <img src="https://via.placeholder.com/400x250" alt="">
-  </div>
-</section>
-
-<section id="equipo" class="seccion">
-  <h2>Nuestro Equipo</h2>
-  <div class="equipo">
-    <div class="miembro">
-      <img src="https://via.placeholder.com/150" alt="">
-      <p>Juan Pérez</p>
+      <p><strong>Dirección:</strong> Jr. Mercurio 7598, Urb. Sol de Oro</p>
+      <p><strong>Email:</strong> ccarabayllo@caritas.org.pe</p>
     </div>
-    <div class="miembro">
-      <img src="https://via.placeholder.com/150" alt="">
-      <p>María López</p>
-    </div>
-    <div class="miembro">
-      <img src="https://via.placeholder.com/150" alt="">
-      <p>Carlos Ramos</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="eventos" class="seccion">
-  <h2>Eventos Recientes</h2>
-  <div class="eventos-grid">
-    <div class="evento">
-      <img src="https://via.placeholder.com/350x200" alt="">
-      <h3>Campaña de Donación</h3>
-      <p>15 Julio 2025 – Apoya con ropa y alimentos.</p>
-    </div>
-    <div class="evento">
-      <img src="https://via.placeholder.com/350x200" alt="">
-      <h3>Voluntariado Juvenil</h3>
-      <p>10 Agosto 2025 – Jornada de acción social.</p>
-    </div>
-  </div>
-</section>
+  <!-- Contacto -->
+  <section id="contacto" class="container py-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Tu correo" required>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="5" placeholder="Tu mensaje" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
 
-<section id="transparencia" class="seccion">
-  <h2>Transparencia</h2>
-  <ul class="docs">
-    <li><a href="#">Informe Anual 2024</a></li>
-    <li><a href="#">Estados Financieros</a></li>
-  </ul>
-  <p><strong>Dirección:</strong> Jr. Mercurio 7598, Urb. Sol de Oro</p>
-  <p><strong>Email:</strong> ccarabayllo@caritas.org.pe</p>
-</section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cáritas Carabayllo – Parte de Cáritas Lima.</p>
+  </footer>
 
-<section id="contacto" class="seccion">
-  <h2>Contáctanos</h2>
-  <form>
-    <input type="text" placeholder="Tu nombre" required>
-    <input type="email" placeholder="Tu correo" required>
-    <textarea placeholder="Tu mensaje" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-<footer>
-  <p>&copy; 2025 Cáritas Carabayllo – Parte de Cáritas Lima</p>
-</footer>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
