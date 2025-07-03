@@ -1,71 +1,113 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cáritas Parroquial</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container header-container">
-      <img src="images/logo.png" alt="Logo Cáritas" class="logo" />
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Quiénes Somos</a></li>
-          <li><a href="#">Programas</a></li>
-          <li><a href="#">Noticias</a></li>
-          <li><a href="#">Contáctanos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Solidaridad que transforma vidas</h1>
-      <p>Ayudamos a quienes más lo necesitan</p>
-    </div>
-  </section>
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
 
-  <section class="about">
-    <div class="container">
-      <h2>¿Quiénes Somos?</h2>
-      <p>Cáritas es una organización sin fines de lucro que trabaja por el desarrollo integral de las personas, especialmente las más vulnerables.</p>
-    </div>
-  </section>
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  <section class="programs">
-    <div class="container">
-      <h2>Nuestros Programas</h2>
-      <div class="program-cards">
-        <div class="card">
-          <img src="images/program1.jpg" alt="Programa 1" />
-          <h3>Salud Comunitaria</h3>
-          <p>Acceso a servicios de salud para poblaciones vulnerables.</p>
-        </div>
-        <div class="card">
-          <img src="images/program2.jpg" alt="Programa 2" />
-          <h3>Educación Solidaria</h3>
-          <p>Becas y apoyo escolar para niños y jóvenes.</p>
-        </div>
-        <div class="card">
-          <img src="images/program3.jpg" alt="Programa 3" />
-          <h3>Alimentación y Nutrición</h3>
-          <p>Entrega de alimentos y campañas nutricionales.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+header {
+  background-color: #005194;
+  padding: 20px 0;
+}
 
-  <footer>
-    <div class="container footer-container">
-      <p>&copy; 2025 Cáritas Parroquial. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+.logo {
+  height: 60px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.about, .programs {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.about h2, .programs h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #005194;
+}
+
+.program-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #eef5fb;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #003865;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
 
