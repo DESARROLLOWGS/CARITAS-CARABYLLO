@@ -51,7 +51,7 @@ header {
 
 .hero {
   background: url('../images/hero.jpeg') no-repeat center center/cover;
-  height: 400px;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
