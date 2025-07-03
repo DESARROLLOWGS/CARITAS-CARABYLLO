@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cáritas Parroquial</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <img src="images/logo.png" alt="Logo Cáritas" class="logo" />
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="#">Programas</a></li>
+          <li><a href="#">Noticias</a></li>
+          <li><a href="#">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Solidaridad que transforma vidas</h1>
+      <p>Ayudamos a quienes más lo necesitan</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h2>¿Quiénes Somos?</h2>
+      <p>Cáritas es una organización sin fines de lucro que trabaja por el desarrollo integral de las personas, especialmente las más vulnerables.</p>
+    </div>
+  </section>
+
+  <section class="programs">
+    <div class="container">
+      <h2>Nuestros Programas</h2>
+      <div class="program-cards">
+        <div class="card">
+          <img src="images/program1.jpg" alt="Programa 1" />
+          <h3>Salud Comunitaria</h3>
+          <p>Acceso a servicios de salud para poblaciones vulnerables.</p>
+        </div>
+        <div class="card">
+          <img src="images/program2.jpg" alt="Programa 2" />
+          <h3>Educación Solidaria</h3>
+          <p>Becas y apoyo escolar para niños y jóvenes.</p>
+        </div>
+        <div class="card">
+          <img src="images/program3.jpg" alt="Programa 3" />
+          <h3>Alimentación y Nutrición</h3>
+          <p>Entrega de alimentos y campañas nutricionales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Cáritas Parroquial. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
