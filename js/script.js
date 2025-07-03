@@ -8,3 +8,13 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 5000); // cambia cada 5 segundos
+
+// Header dinámico
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
