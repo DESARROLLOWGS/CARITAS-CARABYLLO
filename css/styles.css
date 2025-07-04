@@ -128,6 +128,7 @@ header.scrolled{
   font-size: 1rem;
   color: #444;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .program-cards {
