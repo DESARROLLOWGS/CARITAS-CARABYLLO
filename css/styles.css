@@ -213,6 +213,13 @@ footer {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .team-info {
