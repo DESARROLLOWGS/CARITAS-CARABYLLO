@@ -283,3 +283,83 @@ footer {
   color: #771c1c;
   font-size: 0.9rem;
 }
+
+/* =========================================== SECCION DE NOTICIAS O PROGRAMAS ETC */
+.noticias {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.noticias h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-family: 'Georgia', serif;
+}
+
+.noticias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.noticia {
+  width: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.noticia h3 {
+  font-size: 1rem;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+.noticia .fecha {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.noticia .resumen {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.noticia .leer-mas {
+  color: #d32f2f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.noticia .leer-mas:hover {
+  text-decoration: underline;
+}
+
+/* 🔁 Responsivo */
+@media screen and (max-width: 992px) {
+  .noticia {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .noticias-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticia {
+    width: 100%;
+    max-width: 400px;
+  }
+}
