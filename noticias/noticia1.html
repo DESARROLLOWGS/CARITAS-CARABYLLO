@@ -141,6 +141,58 @@
         flex-direction: column;
       }
     }
+
+    /* Lightbox estilo */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding: 40px;
+  background: rgba(0,0,0,0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.lightbox .cerrar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox .controles {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding: 0 30px;
+}
+
+.lightbox .controles span:hover {
+  color: #ccc;
+}
+
+
+    
+
+    
   </style>
 </head>
 <body>
@@ -166,11 +218,23 @@
     <div class="galeria">
       <h3>Galería de fotos</h3>
       <div class="galeria-container">
-        <img src="../images/galeria1-1.jpeg" alt="Foto 1">
-        <img src="../images/galeria1-2.jpg" alt="Foto 2">
-        <img src="../images/galeria1-3.jpg" alt="Foto 3">
+        <img src="../images/galeria1-1.jpg" alt="Foto 1" onclick="abrirLightbox(0)">
+        <img src="../images/galeria1-2.jpg" alt="Foto 2" onclick="abrirLightbox(1)">
+        <img src="../images/galeria1-3.jpg" alt="Foto 3" onclick="abrirLightbox(2)">
       </div>
     </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="cerrar" onclick="cerrarLightbox()">×</span>
+      <img id="imagen-lightbox" src="" alt="Vista ampliada">
+      <div class="controles">
+        <span onclick="cambiarImagen(-1)">❮</span>
+        <span onclick="cambiarImagen(1)">❯</span>
+      </div>
+    </div>
+
+    
 
     <a href="../index.html#noticias" class="volver">← Volver a Noticias</a>
   </div>
@@ -198,5 +262,41 @@
   }
 </script>
 
+<script>
+  const imagenes = [
+    "../images/galeria1-1.jpg",
+    "../images/galeria1-2.jpg",
+    "../images/galeria1-3.jpg"
+  ];
+  let indiceActual = 0;
+
+  function abrirLightbox(indice) {
+    indiceActual = indice;
+    document.getElementById("imagen-lightbox").src = imagenes[indice];
+    document.getElementById("lightbox").style.display = "block";
+  }
+
+  function cerrarLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function cambiarImagen(direccion) {
+    indiceActual += direccion;
+    if (indiceActual < 0) indiceActual = imagenes.length - 1;
+    if (indiceActual >= imagenes.length) indiceActual = 0;
+    document.getElementById("imagen-lightbox").src = imagenes[indiceActual];
+  }
+
+  // También puedes cerrar con tecla Escape
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") cerrarLightbox();
+    if (e.key === "ArrowRight") cambiarImagen(1);
+    if (e.key === "ArrowLeft") cambiarImagen(-1);
+  });
+</script>
+
+
+
+  
 </body>
 </html>
