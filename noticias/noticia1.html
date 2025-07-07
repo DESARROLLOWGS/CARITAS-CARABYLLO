@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promotores Agroforestales - NotiCáritas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noticia completa - NotiCáritas</title>
   <link rel="stylesheet" href="../css/estilos.css">
   <style>
-    .noticia-detalle {
-      max-width: 800px;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .detalle-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 20px;
+      gap: 20px;
+    }
+
+    .noticia-detalle {
+      flex: 1 1 65%;
       background-color: #fff;
+      padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
@@ -49,20 +64,139 @@
     .volver:hover {
       text-decoration: underline;
     }
+
+    .sidebar {
+      flex: 1 1 30%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .botones-compartir {
+      margin-top: 20px;
+    }
+
+    .botones-compartir button {
+      margin-right: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4267B2;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .botones-compartir button.whatsapp {
+      background-color: #25D366;
+    }
+
+    .galeria {
+      margin-top: 30px;
+    }
+
+    .galeria h3 {
+      margin-bottom: 10px;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .galeria-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .detalle-container {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <section class="noticia-detalle">
+<div class="detalle-container">
+
+  <!-- Contenido principal -->
+  <div class="noticia-detalle">
     <img src="../images/noticia1.jpg" alt="Promotores Agroforestales">
-    <h1>Promotores Agroforestales de Loreto y Madre de Dios fortalecen sus capacidades para preservar la Amazonía</h1>
+    <h1>Promotores Agroforestales fortalecen sus capacidades para preservar la Amazonía</h1>
     <p class="fecha">4 julio, 2025 /// No hay comentarios</p>
     <p>Encuentro intercultural fomenta prácticas sostenibles, recuperación de saberes ancestrales y resiliencia comunitaria ante el cambio climático.</p>
-    <p>Del 2 al 4 de julio se desarrolló con éxito el Encuentro “Intercambio de Experiencias de Promotores Agroforestales, Promoviendo Modelos Sostenibles Agroecológicos y Agroforestales”, un espacio de diálogo e intercambio de saberes entre promotores indígenas de las regiones de Loreto y Madre de Dios.</p>
-    <p>El evento fue organizado por Cáritas del Perú con el apoyo de diversas instituciones locales e internacionales comprometidas con el desarrollo sostenible.</p>
+    <p>Del 2 al 4 de julio se desarrolló con éxito el Encuentro “Intercambio de Experiencias de Promotores Agroforestales”, un espacio de diálogo e intercambio de saberes entre promotores indígenas de las regiones de Loreto y Madre de Dios.</p>
+
+    <!-- Botones para compartir -->
+    <div class="botones-compartir">
+      <strong>Compartir:</strong>
+      <button onclick="compartirFacebook()">Facebook</button>
+      <button class="whatsapp" onclick="compartirWhatsapp()">WhatsApp</button>
+    </div>
+
+    <!-- Galería de fotos -->
+    <div class="galeria">
+      <h3>Galería de fotos</h3>
+      <div class="galeria-container">
+        <img src="../images/galeria1-1.jpg" alt="Foto 1">
+        <img src="../images/galeria1-2.jpg" alt="Foto 2">
+        <img src="../images/galeria1-3.jpg" alt="Foto 3">
+      </div>
+    </div>
 
     <a href="../index.html#noticias" class="volver">← Volver a Noticias</a>
-  </section>
+  </div>
+
+  <!-- Barra lateral -->
+  <aside class="sidebar">
+    <h3>Otras Noticias</h3>
+    <ul>
+      <li><a href="noticia2.html">Donación de alimentos por Airport Dimensions</a></li>
+      <li><a href="noticia3.html">Fortalecimiento alimentario en comunidades amazónicas</a></li>
+    </ul>
+  </aside>
+
+</div>
+
+<script>
+  function compartirFacebook() {
+    const url = window.location.href;
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+  }
+
+  function compartirWhatsapp() {
+    const url = window.location.href;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
