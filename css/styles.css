@@ -489,3 +489,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #b71c1c;
 }
+/*===================================================================== AJUSTA PARA QUE SE PUEDA VER BIEN LAS SECCIONES AL BAJAR =============*/
+section {
+  scroll-margin-top: 80px; /* ajusta según la altura de tu header */
+}
