@@ -400,6 +400,7 @@ footer {
   cursor: pointer;
   overflow: hidden;
   background-color: white; /* para que los íconos resalten */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn-red:hover {
@@ -424,6 +425,14 @@ footer {
 .x         { background-color: #1da1f2; }
 .youtube   { background-color: #cd201f; }
 .tiktok    { background-color: #000; }
+
+/* PARA OCULTAR LOS BOTONES FLOTANTES EN PANTALLAS CHICAS CELULARES*/
+@media (max-width: 768px) {
+  .redes-flotantes {
+    display: none;
+  }
+}
+
 
 /*=================================================================== CSS PARA EL FORMULARIO ====================*/
 .contacto {
